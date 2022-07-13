@@ -1,20 +1,26 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import { createSwitchNavigator, createAppContainer } from 'react-navigation';
+import ListScreen from './screens/ListScreen';
+import LoginScreen from './screens/LoginScreen';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <AppContainer />
     </View>
   );
 }
 
+const AppNavigator = createSwitchNavigator({
+  LoginScreen: LoginScreen,
+  ListScreen: ListScreen
+});
+
+const AppContainer = createAppContainer(AppNavigator);
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
   },
 });
