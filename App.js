@@ -2,7 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import { createSwitchNavigator, createAppContainer } from 'react-navigation';
 import ListScreen from './screens/ListScreen';
-import LoginScreen from './screens/LoginScreen';
+import SignUpScreen from './screens/SignUpScreen';
 
 export default function App() {
   return (
@@ -13,7 +13,7 @@ export default function App() {
 }
 
 const AppNavigator = createSwitchNavigator({
-  LoginScreen: LoginScreen,
+  SignUpScreen: SignUpScreen,
   ListScreen: ListScreen
 });
 
